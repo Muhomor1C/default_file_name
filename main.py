@@ -7,8 +7,9 @@ def find_index(pattern):
     index = 0
     for name in listofstrings:
         result = re.match(pattern, name)
-        if not result is None:
-            list_.append(int(result.group(2)))
+        if result is None:
+            continue
+        list_.append(int(result.group(2)))
     if len(list_) > 0:
         index = sorted(list_)[-1]
     return index
