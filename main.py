@@ -23,8 +23,8 @@ def up_version(desiredname, operation):
         version = find_index(pattern)
         return desiredname + '(' + str(version + 1) + ')'
     if operation == "2":  # Copy
-        preffix = r"(Copy\()([0-9]+)(\)"
-        pattern = f'{preffix}{replasename})'
+        prefix = r"(Copy\()([0-9]+)(\)"
+        pattern = f'{prefix}{replasename})'
         version = find_index(pattern)
         return 'Copy(' + str(version + 1) + ')' + desiredname
 
