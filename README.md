@@ -44,19 +44,19 @@ Zapewnić możliwość tworzenia nazw dla kopii
 
 Logika pracy:
 
-<em><strong>1. Podczas zapisywania nowego pliku< / strong></em>, użytkownik otrzymuje domyślną nazwę - "My book".
-Jeśli taka nazwa już istnieje, indeks w nawiasach jest dodawany na końcu. Na przykład - <strong>My book (1)< / strong > jeśli pliki z indendexem
+<em><strong>1. Podczas zapisywania nowego pliku</strong></em>, użytkownik otrzymuje domyślną nazwę - "My book".
+Jeśli taka nazwa już istnieje, indeks w nawiasach jest dodawany na końcu. Na przykład - <strong>My book(1)</strong > jeśli pliki z indendexem
 już istnieje, to jest indeks tego ostatniego i zwiększa się o 1. To samo dzieje się z nazwą wprowadzoną ręcznie przez użytkownika.
 
-<em><strong>2. Podczas kopiowania pliku</strong> < / em>, nazwa kopiowanego pliku jest sugerowana, na początku której dodawana jest linia "Copy(N)", gdzie N jest numerem kopii. Na przykład: <strong>Copy (1) My book</strong> Jeśli ten plik ma już kopie, to jest ostatni numer i jest zwiększany o 1.
+<em><strong>2. Podczas kopiowania pliku</strong> </em>, nazwa kopiowanego pliku jest sugerowana, na początku której dodawana jest linia "Copy(N)", gdzie N jest numerem kopii. Na przykład: <strong>Copy(1)My book</strong> Jeśli ten plik ma już kopie, to jest ostatni numer i jest zwiększany o 1.
 
 Dodatkowe funkcje-nazwa kopii może śledzić cały łańcuch kopiowania, co pomaga zespołowi wsparcia w przypadku" utraty " oryginału przez użytkownika.
 
 Cała praca odbywa się w dwóch funkcjach:
 
-<em> < strong>up_version ()< / strong > < / em > - pobiera żądaną nazwę, tworzy szablon do sprawdzania podobnych i generuje nową nazwę
+<em><strong>up_version()</strong></em > - pobiera żądaną nazwę, tworzy szablon do sprawdzania podobnych i generuje nową nazwę
 
-<em><strong>find_index () < / strong > < / em > - wyszukuje numer ostatniego pliku lub kopii
+<em><strong>find_index()</strong ></em > - wyszukuje numer ostatniego pliku lub kopii
 
 Cała reszta uprzęży to interfejs do sprawdzania działania.
 
